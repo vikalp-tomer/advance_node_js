@@ -1,5 +1,8 @@
-import express from 'express';
+import express from "express";
+import { VendorLogin } from "../controllers";
 
 const router = express.Router();
 
-export { router as VendorRoute }
+router.post("/login", VendorLogin);
+
+export { router as VendorRoute };

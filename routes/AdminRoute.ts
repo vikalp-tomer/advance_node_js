@@ -1,8 +1,12 @@
-import express from 'express';
-import { CreateVendor } from '../controllers';
+import express from "express";
+import { CreateVendor, GetVendorByID, GetVendors } from "../controllers";
 
 const router = express.Router();
 
-router.get("/Vendor", CreateVendor)
+router.post("/vendor", CreateVendor);
 
-export { router as AdminRoute }
+router.get("/vendors", GetVendors);
+
+router.get("/vendor/:id", GetVendorByID);
+
+export { router as AdminRoute };
